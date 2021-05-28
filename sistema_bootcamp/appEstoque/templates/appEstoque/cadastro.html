@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+
+<h3> Sistema de controle de estoque </h3>
+
+<p>
+    Utilize o menu abaixo para cadastrar um produto
+</p>
+
+<hr/>
+
+
+
+<form method="POST" action="{% url 'appestoque:cadastrar' %}">
+    {% csrf_token %}
+
+    {{ form.nome.label }} {{ form.nome }}
+    <br>
+    <br>
+    {{ form.preco.label }} {{ form.preco }}
+    <br>
+    <br>
+    {{ form.quantidade.label }} {{ form.quantidade }}
+    <br>
+    <br>
+    <input type="submit" value="Cadastrar">
+</form>
+
+{% if msg %} {{ msg }} {% endif %}
+
+</body>
+</html>

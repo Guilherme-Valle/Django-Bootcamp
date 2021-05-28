@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+
+<h3> Sistema de controle de estoque </h3>
+
+<p>
+    Utilize o menu abaixo para acessar o sistema
+</p>
+
+<hr/>
+
+<ul>
+    <li>
+        <a href="{% url 'appestoque:home' %}">Home</a>
+    </li>
+    <li>
+        <a href="{% url 'appestoque:cadastro' %}">Cadastro</a>
+    </li>
+    <li>
+        <a href="{% url 'appestoque:lista' %}">Lista</a>
+    </li>
+</ul>
+
+</body>
+</html>

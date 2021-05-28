@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+</head>
+<body>
+
+<h3> Sistema de controle de estoque </h3>
+
+<p>
+    Lista de produtos cadastrados
+</p>
+
+<hr/>
+{% if produtos or produtos|length > 0 %}
+<table border="1" bordercolor="green" width="75%">
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Quantidade</th>
+    </tr>
+    {% for produto in produtos %}
+
+    <tr>
+        <td> {{ produto.codigo }} </td>
+        <td> {{ produto.nome }} </td>
+        <td> {{ produto.preco }} </td>
+        <td> {{ produto.quantidade }} </td>
+    </tr>
+
+    {% endfor %}
+</table>
+{% else  %}
+<p>Não há produtos cadastrados</p>
+
+{% endif %}
+
+</body>
+</html>
